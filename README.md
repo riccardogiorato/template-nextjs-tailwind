@@ -1,4 +1,4 @@
-# Next.js 10 + TailwindCSS + PurgeCSS --> minimal setup
+# Next.js 11 + TailwindCSS + PurgeCSS --> minimal setup
 ## No Extra packages added, super light version!
 ![](./img/nextjs-tailwind-purgecss.png)
 
