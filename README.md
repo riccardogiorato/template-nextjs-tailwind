@@ -2,7 +2,7 @@
 
 ## No Extra packages added, super light version!
 
-![](./public/cover.png)
+![](./public/cover.jpg)
 
 This is a [Next.js](https://nextjs.org/) and with [Tailwind CSS](https://tailwindcss.com/)
 
