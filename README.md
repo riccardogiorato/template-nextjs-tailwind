@@ -1,4 +1,4 @@
-# Next.js 12 + Tailwind CSS --> minimal setup
+# Template with Next.js 12 + Typescript + Tailwind CSS
 
 ## No Extra packages added, super light version!
 

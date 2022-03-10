@@ -1,4 +1,6 @@
-export default function Home() {
+import type { NextPage } from "next";
+
+const Home: NextPage = () => {
   return (
     <div className="bg-white shadow p-3 rounded lg:w-64">
       <div>
@@ -19,4 +21,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Home;

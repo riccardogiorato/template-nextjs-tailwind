@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-tailwind-purgecss-minimal",
+  "name": "template-nextjs-tailwind",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,8 @@
     "dev:tailwind": "npx tailwindcss -i src/styles/style.css -o src/styles/build.css --minify --watch",
     "build": "yarn build:tailwind && yarn build:next",
     "build:next": "next build",
-    "build:tailwind": "npx tailwindcss -i src/styles/style.css -o src/styles/build.css --minify"
+    "build:tailwind": "npx tailwindcss -i src/styles/style.css -o src/styles/build.css --minify",
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "12.1.0",
@@ -17,6 +18,11 @@
     "tailwindcss": "^3.0.23"
   },
   "devDependencies": {
+    "@types/node": "17.0.21",
+    "@types/react": "17.0.40",
+    "eslint": "8.10.0",
+    "eslint-config-next": "12.1.0",
+    "typescript": "4.6.2",
     "concurrently": "^7.0.0"
   }
 }
