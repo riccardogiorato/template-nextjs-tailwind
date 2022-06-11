@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "prisma.prisma",
+    "usernamehw.errorlens",
+    "formulahendry.auto-rename-tag"
+  ]
+}
