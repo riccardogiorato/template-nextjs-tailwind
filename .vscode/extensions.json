@@ -4,7 +4,6 @@
     "bradlc.vscode-tailwindcss",
     "prisma.prisma",
     "usernamehw.errorlens",
-    "formulahendry.auto-rename-tag",
-    "Codeium.codeium"
+    "formulahendry.auto-rename-tag"
   ]
 }
