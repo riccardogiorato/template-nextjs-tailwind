@@ -4,6 +4,8 @@
     "bradlc.vscode-tailwindcss",
     "prisma.prisma",
     "usernamehw.errorlens",
-    "formulahendry.auto-rename-tag"
+    "formulahendry.auto-rename-tag",
+    "GitHub.copilot",
+    "GitHub.github-vscode-theme"
   ]
 }
