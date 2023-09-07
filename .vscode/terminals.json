@@ -1,0 +1,12 @@
+{
+  "autorun": true,
+  "autokill": true,
+  "terminals": [
+    {
+      "name": "DEV",
+      "focus": true,
+      "open": true,
+      "commands": ["yarn", "yarn dev"]
+    }
+  ]
+}
