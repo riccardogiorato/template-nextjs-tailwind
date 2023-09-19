@@ -1,4 +1,4 @@
-# Template with Next.js 13 + Typescript + Tailwind CSS
+# Template with Next.js 13.5 + Typescript + Tailwind CSS
 
 ## No Extra packages added, super light version!
 
