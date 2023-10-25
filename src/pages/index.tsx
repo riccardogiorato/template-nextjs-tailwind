@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import { Button } from "../components/Button";
+import { ArticlesList, getArticlePath } from "./a/[slug]";
 
 const Home: NextPage = () => {
   return (
@@ -65,6 +66,18 @@ const Home: NextPage = () => {
         </p>
         <Button>Read more</Button>
       </article>
+
+      <div className="flex flex-row gap-2 p-6">
+        {ArticlesList.map((slug) => {
+          return (
+            <div key={slug}>
+              <a href={getArticlePath(slug)}>
+                <Button>{slug}</Button>
+              </a>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
