@@ -1,4 +1,4 @@
-# Template with Next.js 13.5 + Typescript + Tailwind CSS
+# Template with Next.js 14 + Typescript + Tailwind CSS
 
 ## No Extra packages added, super light version!
 
@@ -28,3 +28,9 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## TODO
+
+- [] Integrate Next SEO https://github.com/garmeeh/next-seo
+- [] Integrate Next Sitemap https://github.com/iamvishnusankar/next-sitemap
+-
