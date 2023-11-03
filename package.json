@@ -10,7 +10,7 @@
     "build": "yarn build:tailwind && yarn build:next",
     "build:next": "next build",
     "build:tailwind": "npx tailwindcss -i src/styles/style.css -o src/styles/build.css --minify",
-    "update:all": "yarn upgrade-interactive --latest",
+    "update:all": "yarn upgrade-interactive",
     "generate": "yarn prisma generate"
   },
   "dependencies": {
@@ -28,5 +28,9 @@
     "concurrently": "^8.2.2",
     "postcss": "8.4.31",
     "typescript": "5.2.2"
+  },
+  "packageManager": "yarn@4.0.1",
+  "engines": {
+    "node": ">=18.17.0"
   }
 }
