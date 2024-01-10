@@ -5,6 +5,7 @@
   "scripts": {
     "start": "yarn dev",
     "dev": "concurrently \"yarn:dev:*\"",
+    "dev:reflect": "npx reflect dev",
     "dev:next": "next dev",
     "dev:tailwind": "npx tailwindcss -i src/styles/style.css -o src/styles/build.css --minify --watch",
     "build": "yarn build:tailwind && yarn build:next",
@@ -15,6 +16,7 @@
   },
   "dependencies": {
     "@prisma/client": "^5.6.0",
+    "@rocicorp/reflect": "^0.39.202401100534",
     "next": "14.0.3",
     "prisma": "^5.6.0",
     "react": "18.2.0",

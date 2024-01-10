@@ -1,0 +1,3 @@
+{
+  "server": "./src/reflect-server/index.ts"
+}

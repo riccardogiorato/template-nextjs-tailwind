@@ -2,7 +2,24 @@ import type { NextPage } from "next";
 import { Button } from "../components/Button";
 import { ArticlesList, getArticlePath } from "./a/[slug]";
 
+import { Reflect } from "@rocicorp/reflect/client";
+import { useSubscribe } from "@rocicorp/reflect/react";
+import { mutators } from "../reflect-client/mutators";
+
+const r = new Reflect({
+  server: "http://localhost:8080",
+  roomID: "templateNext",
+  userID: "username1",
+  mutators,
+});
+
 const Home: NextPage = () => {
+  const onClick = () => {
+    void r.mutate.increment(1);
+  };
+
+  const count = useSubscribe(r, (tx) => tx.get<number>("count"), 0);
+
   return (
     <div className="my-auto max-w-2xl mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
       <img
@@ -10,6 +27,8 @@ const Home: NextPage = () => {
         src="https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
         alt="Article"
       />
+
+      <button onClick={onClick}>{count}</button>
 
       <div className="p-6">
         <div>
