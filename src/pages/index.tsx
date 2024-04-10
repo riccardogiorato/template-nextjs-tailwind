@@ -2,83 +2,132 @@ import type { NextPage } from "next";
 import { Button } from "../components/Button";
 import { ArticlesList, getArticlePath } from "./a/[slug]";
 
-const Home: NextPage = () => {
+import Image from "next/image";
+import { Navbar } from "../components/Navbar";
+
+export const Home: NextPage = () => {
   return (
-    <div className="my-auto max-w-2xl mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
-      <img
-        className="object-cover w-full h-64"
-        src="https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-        alt="Article"
-      />
-
-      <div className="p-6">
-        <div>
-          <span className="text-xs font-medium text-blue-600 uppercase dark:text-blue-400">
-            Product
-          </span>
-          <a
-            href="#"
-            className="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-200 transform dark:text-white hover:text-gray-600 hover:underline"
-          >
-            I Built A Successful Blog In One Year
-          </a>
-          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie
-            parturient et sem ipsum volutpat vel. Natoque sem et aliquam mauris
-            egestas quam volutpat viverra. In pretium nec senectus erat. Et
-            malesuada lobortis.
+    <>
+      <Navbar pages={[]} />
+      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+        <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
+          <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+            Get started by editing&nbsp;
+            <code className="font-mono font-bold">pages/index.tsx</code>
           </p>
-        </div>
-
-        <div className="mt-4">
-          <div className="flex items-center">
-            <div className="flex items-center">
-              <img
-                className="object-cover h-10 rounded-full"
-                src="https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=48&q=60"
-                alt="Avatar"
+          <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
+            <a
+              className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
+              href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              By{" "}
+              <Image
+                src="/vercel.svg"
+                alt="Vercel Logo"
+                className="dark:invert"
+                width={100}
+                height={24}
+                priority
               />
-              <a
-                href="#"
-                className="mx-2 font-semibold text-gray-700 dark:text-gray-200"
-              >
-                Jone Doe
-              </a>
-            </div>
-            <span className="mx-1 text-xs text-gray-600 dark:text-gray-300">
-              1 SEP 2022
-            </span>
+            </a>
           </div>
         </div>
-      </div>
 
-      <article className="prose lg:prose-xl p-6">
-        <h3>Garlic bread with cheese: What the science tells us</h3>
-        <p>
-          For years parents have espoused the health benefits of eating garlic
-          bread with cheese to their children, with the food earning such an
-          iconic status in our culture that kids will often dress up as warm,
-          cheesy loaf for Halloween.
-        </p>
-        <p>
-          But a recent study shows that the celebrated appetizer may be linked
-          to a series of rabies cases springing up around the country.
-        </p>
-        <Button>Read more</Button>
-      </article>
+        <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+          <Image
+            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+            src="/next.svg"
+            alt="Next.js Logo"
+            width={180}
+            height={37}
+            priority
+          />
+        </div>
 
-      <div className="flex flex-row gap-2 p-6">
-        {ArticlesList.map((slug) => {
-          return (
-            <div key={slug}>
-              <a href={getArticlePath(slug)}>
-                <Button>{slug}</Button>
-              </a>
-            </div>
-          );
-        })}
-      </div>
-    </div>
+        <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
+          <a
+            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h2 className={`mb-3 text-2xl font-semibold`}>
+              Docs{" "}
+              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                -&gt;
+              </span>
+            </h2>
+            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+              Find in-depth information about Next.js features and API.
+            </p>
+          </a>
+
+          <a
+            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h2 className={`mb-3 text-2xl font-semibold`}>
+              Learn{" "}
+              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                -&gt;
+              </span>
+            </h2>
+            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+              Learn about Next.js in an interactive course with&nbsp;quizzes!
+            </p>
+          </a>
+
+          <a
+            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h2 className={`mb-3 text-2xl font-semibold`}>
+              Templates{" "}
+              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                -&gt;
+              </span>
+            </h2>
+            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+              Explore starter templates for Next.js.
+            </p>
+          </a>
+
+          <a
+            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h2 className={`mb-3 text-2xl font-semibold`}>
+              Deploy{" "}
+              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                -&gt;
+              </span>
+            </h2>
+            <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
+              Instantly deploy your Next.js site to a shareable URL with Vercel.
+            </p>
+          </a>
+        </div>
+        <div className="flex flex-row gap-2 p-6">
+          {ArticlesList.map((slug) => {
+            return (
+              <div key={slug}>
+                <a href={getArticlePath(slug)}>
+                  <Button>{slug}</Button>
+                </a>
+              </div>
+            );
+          })}
+        </div>
+      </main>
+    </>
   );
 };
 
