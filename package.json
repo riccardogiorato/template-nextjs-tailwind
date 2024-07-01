@@ -14,20 +14,20 @@
     "generate": "yarn prisma generate"
   },
   "dependencies": {
-    "@prisma/client": "^5.12.1",
-    "next": "14.2.1",
-    "prisma": "^5.12.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwindcss": "^3.4.3"
+    "@prisma/client": "^5.16.1",
+    "next": "14.2.4",
+    "prisma": "^5.16.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwindcss": "^3.4.4"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.12",
-    "@types/node": "18.19.31",
-    "@types/react": "18.2.78",
+    "@tailwindcss/typography": "^0.5.13",
+    "@types/node": "18.19.39",
+    "@types/react": "18.3.3",
     "concurrently": "^8.2.2",
-    "postcss": "8.4.38",
-    "typescript": "5.4.5"
+    "postcss": "8.4.39",
+    "typescript": "5.5.2"
   },
   "packageManager": "yarn@4.0.1",
   "engines": {
