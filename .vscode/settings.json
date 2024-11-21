@@ -5,5 +5,8 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "terminal.integrated.enablePersistentSessions": false,
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  }
 }
