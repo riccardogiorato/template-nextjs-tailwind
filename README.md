@@ -1,4 +1,4 @@
-# Template with Next.js 14 + Typescript + Tailwind CSS
+# Template with Next.js 15 + Typescript + Tailwind 4.0
 
 ## No Extra packages added, super light version!
 
@@ -11,9 +11,7 @@ This is a [Next.js](https://nextjs.org/) and with [Tailwind CSS](https://tailwin
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
+pnpm install && pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
