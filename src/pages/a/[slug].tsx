@@ -42,6 +42,11 @@ export const getStaticProps = (async (context) => {
 export default function Page({
 	article,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+	// Add null check for article to prevent undefined errors
+	if (!article) {
+		return <div>Loading...</div>;
+	}
+
 	return (
 		<>
 			<Navbar pages={[{ name: article.slug, href: "#", current: true }]} />
